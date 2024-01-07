@@ -1,0 +1,18 @@
+{
+  "name": "introducao-typescript",
+  "version": "1.0.0",
+  "description": "TYPESCRIPT É UMA LINGUAGEM DE PROGRAMAÇÃO DE CÓDIGO ABERTO DESENVOLVIDA PELA MICROSOFT. É UM SUPERCONJUNTO SINTÁTICO ESTRITO DE JAVASCRIPT E ADICIONA TIPAGEM ESTÁTICA OPCIONAL À LINGUAGEM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "node"
+  ],
+  "author": "Bruno Félix de Sousa",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
