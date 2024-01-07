@@ -1,37 +1,57 @@
-interface UserInterface {
-  firstName: string;
-  readonly lastName?: string;
-  age: number;
+interface Location {
+  latitude: number,
+  longitude: number,
+  readonly numberLocation: number
 
-  getFullName(): string;
+  getLocation(): string;
 }
 
-const getUser = (user: UserInterface): string => {
-  return `${user.firstName} ${user.lastName}, age: ${user.age}`;
+const getLocation = (location: Location): string => {
+  return `${location.latitude} - ${location.longitude}`
 }
 
-// let user = {
-//   firstName: 'Carlos',
-//   lastName: 'Ferreira',
-//   age: 30
+// const location = {
+//   latitude: 12312,
+//   longitude2: 321
 // }
+// getLocation(location)
 
-// console.log(getUser(user))
+// const location: Location = {
+//   latitude: 123,
+//   longitude: 321,
+//   numberLocation: 123
+// }
+// location.numberLocation = 32132 // error
+// getLocation(location)
 
-class Person implements UserInterface {
-  firstName: string;
-  readonly lastName?: string;
-  age: number;
+class LocationMap implements Location {
+  latitude: number;
+  longitude: number;
+  numberLocation: number = 0;
 
-  constructor(firstN: string, lastN: string, ageU: number) {
-    this.firstName = firstN;
-    this.lastName = lastN;
-    this.age = ageU;
+  constructor(latitude: number, longitude: number) {
+    this.latitude = latitude
+    this.longitude = longitude
   }
 
-  getFullName(): string {
-    return `${this.firstName} ${this.lastName}`
+  getLocation(): string {
+    return 'any';
   }
 }
-let person = new Person('Carlos', 'Ferreira', 30)
-console.log(getUser(person))
+class LocationMapBR implements Location {
+  latitude: number;
+  longitude: number;
+  numberLocation: number = 0;
+
+  constructor(latitude: number, longitude: number) {
+    this.latitude = latitude
+    this.longitude = longitude
+  }
+
+  getLocation(): string {
+    return 'any';
+  }
+}
+getLocation(new LocationMapBR(123, 321))
+
+export {}
